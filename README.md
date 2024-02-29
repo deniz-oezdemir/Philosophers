@@ -1,4 +1,4 @@
-# 42-Philosophers
+# 42-Philosophers (needs to be updated!)
 
 ## Overview
 The "philo" program provides a solution to the classical [dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem), aiming to demonstrate synchronization techniques in concurrent programming.

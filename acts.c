@@ -6,16 +6,18 @@
 /*   By: denizozd <denizozd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 17:04:26 by denizozd          #+#    #+#             */
-/*   Updated: 2024/02/29 15:30:46 by denizozd         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:13:39 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phil.h"
 
+/* think until 10 ms before death time
+if less then 10 ms before death time left then think max 1 ms*/
 void	think(t_phil *phil)
 {
 	print_msg(phil, "is thinking");
-	precise_usleep((phil->t_die - get_msec() - 10) * 1000); //easy fix? //what happens if precise_usleep(negative value)?
+	precise_usleep((phil->t_die - get_msec() - 10) * 1000);
 }
 
 void	nap(t_phil *phil)
@@ -29,8 +31,8 @@ void	nap(t_phil *phil)
 
 void	drop_forks(t_phil *phil)
 {
-		pthread_mutex_unlock(phil->rt_frk);
-		pthread_mutex_unlock(phil->lt_frk);
+	pthread_mutex_unlock(phil->rt_frk);
+	pthread_mutex_unlock(phil->lt_frk);
 }
 
 /* dividing the cases of even and uneven number of philosophers into

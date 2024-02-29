@@ -6,13 +6,13 @@
 #    By: denizozd <denizozd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/19 14:53:45 by denizozd          #+#    #+#              #
-#    Updated: 2024/02/29 15:11:25 by denizozd         ###   ########.fr        #
+#    Updated: 2024/02/29 16:21:56 by denizozd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = philo
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=thread #-fsanitize=address //check mem leaks!
+CFLAGS = -Wall -Wextra -Werror #-fsanitize=address #-fsanitize=thread
 
 G = "\033[32m"
 Y = "\033[33m"

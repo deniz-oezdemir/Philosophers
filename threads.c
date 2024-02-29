@@ -6,7 +6,7 @@
 /*   By: denizozd <denizozd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 17:02:23 by denizozd          #+#    #+#             */
-/*   Updated: 2024/02/29 14:43:12 by denizozd         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:09:35 by denizozd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,6 @@ int	mlt_phils(t_data *dat)
 	{
 		if (pthread_create(&dat->tids[i], NULL, &execute_acts, &dat->phils[i]))
 			return (error(dat, "Unable to create philsopher thread"));
-		//if (precise_usleep(1/10) == -1)
-		//	return (error(dat, "Unable to delay philsopher thread creation"));
 		i++;
 	}
 	if (pthread_create(&t_monitor, NULL, &monitor_dinner, dat))
