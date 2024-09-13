@@ -14,6 +14,8 @@
 ## Summary
 The "philo" program provides a solution to the classical [dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem), aiming to demonstrate synchronization techniques in concurrent programming.
 
+For the detailed requirements, please refer to the [subject](./en.subject.pdf).
+
 ## Installation and Usage
 
 To install and use the "philo" program, follow these steps:
@@ -120,12 +122,12 @@ This output can be [visualized](https://nafuka11.github.io/philosophers-visualiz
 After each philosopher has eaten twice, the dinner ends and the program stops executing.
 
 ## Learnings
-### Processes vs Threads
-#### Processes
+### Processes
 - Each capable of hosting multiple threads.
 - Upon using fork(), everything gets duplicated, including variables.
 - Modifying a variable in one process does not propagate to the same variable in another process.
-#### Threads
+
+### Threads
 - Share the same memory space.
 - Modifications to variables within a thread are visible to all other threads.
 - Concurrent access to shared variables among multiple threads can lead to "memory races," where the outcome depends on which thread executes first.
