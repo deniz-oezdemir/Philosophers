@@ -1,7 +1,41 @@
-# 42-Philosophers (needs to be updated!)
+# Philosophers
 
-## Overview
+## Table of Contents
+- [Summary](#summary)
+- [Installation and Usage](#installation-and-usage)
+- [Inputs](#inputs)
+- [Output Format](#output-format)
+- [Program](#program)
+- [Example](#example)
+- [Learnings](#learnings)
+- [Debugging](#debugging)
+- [Sources](#sources)
+
+## Summary
 The "philo" program provides a solution to the classical [dining philosophers problem](https://en.wikipedia.org/wiki/Dining_philosophers_problem), aiming to demonstrate synchronization techniques in concurrent programming.
+
+## Installation and Usage
+
+To install and use the "philo" program, follow these steps:
+
+1. Clone the repository to your local machine, navigate to the directory, and build the program using the provided Makefile:
+	```
+	git clone https://github.com/deniz-oezdemir/Philosophers
+	cd Philosophers
+	make
+	```
+
+2. Run the program with the desired arguments. For example:
+	```
+	./philo 4 800 200 200 2
+	```
+
+	This command runs the program with 4 philosophers, a maximum time to live of 800 milliseconds, a time to eat of 200 milliseconds, a time to sleep of 200 milliseconds, and each philosopher must eat 2 times for the dinner to end.
+
+	Note: Make sure to replace the arguments with your desired values.
+
+3. Observe the program's output, which will display the state changes of the philosophers as they dine.
+
 
 ## Inputs
 The program takes several arguments:
@@ -41,43 +75,43 @@ The execution generates the following output:
 ```
 0 1 has taken a fork
 0 1 has taken a fork
+0 3 has taken a fork
+0 3 has taken a fork
+0 3 is eating
 0 1 is eating
-1 2 has taken a fork
 200 1 is sleeping
+200 3 is sleeping
+200 2 has taken a fork
+200 2 has taken a fork
+200 2 is eating
 200 4 has taken a fork
 200 4 has taken a fork
 200 4 is eating
-200 2 has taken a fork
-200 2 is eating
 400 1 is thinking
-400 2 is sleeping
-400 3 has taken a fork
 400 4 is sleeping
-400 3 has taken a fork
-400 3 is eating
-400 1 has taken a fork
-400 1 has taken a fork
-400 1 is eating
+400 3 is thinking
+400 2 is sleeping
 600 4 is thinking
 600 2 is thinking
-600 2 has taken a fork
-600 3 is sleeping
-600 1 is sleeping
-600 2 has taken a fork
-600 2 is eating
-600 4 has taken a fork
-600 4 has taken a fork
-600 4 is eating
-800 1 is thinking
-800 3 is thinking
-800 3 has taken a fork
-800 4 is sleeping
-800 2 is sleeping
-800 3 has taken a fork
-800 3 is eating
-1000 4 is thinking
-1000 2 is thinking
-1000 3 is sleeping
+790 1 has taken a fork
+790 1 has taken a fork
+790 1 is eating
+790 3 has taken a fork
+790 3 has taken a fork
+790 3 is eating
+990 1 is sleeping
+990 3 is sleeping
+990 2 has taken a fork
+990 2 has taken a fork
+990 2 is eating
+990 4 has taken a fork
+990 4 has taken a fork
+990 4 is eating
+1190 3 is thinking
+1190 4 is sleeping
+1190 1 is thinking
+1190 2 is sleeping
+1190 all philosophers have eaten 2 times
 ```
 This output can be [visualized](https://nafuka11.github.io/philosophers-visualizer/) as below:
 
