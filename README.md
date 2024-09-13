@@ -5,7 +5,7 @@
 - [Installation and Usage](#installation-and-usage)
 - [Inputs](#inputs)
 - [Output Format](#output-format)
-- [Program](#program)
+- [Program Outline](#program-outline)
 - [Example](#example)
 - [Learnings](#learnings)
 - [Debugging](#debugging)
@@ -60,7 +60,7 @@ timestamp_in_ms Philosopher_Number is thinking
 timestamp_in_ms Philosopher_Number died
 ```
 
-## Program
+## Program Outline
 1. Reads and validates input arguments.
 2. Creates structures for the program data and the philosophers' data.
 3. Initialize mutexes and allocates memory.
