@@ -16,6 +16,8 @@ The "philo" program provides a solution to the classical [dining philosophers pr
 
 For the detailed requirements, please refer to the [subject](./en.subject.pdf).
 
+**Note:** This project has also been reimplemented in Go to explore its concurrency features. You can find the Go version [here](https://github.com/deniz-oezdemir/philo).
+
 ## Installation and Usage
 
 To install and use the "philo" program, follow these steps:
